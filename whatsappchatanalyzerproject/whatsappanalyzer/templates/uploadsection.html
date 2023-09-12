@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+
+    <style>
+        .k
+        {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .table-container {
+            width: 1000px; /* Set the fixed width of the div */
+            height: 500px; /* Set the fixed height of the div */
+            margin: 0 auto; /* Center the div horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+            background-color: white;
+            margin-top: -20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+
+
+
+    </style>
+
+
+
+    <link rel="stylesheet" href="/static/css/uploadsection.css">
+    <title>WhatsApp Chat Analyzer</title>
+   
+</head>
+<body>
+
+
+
+        <div class="container">
+            <h1>WhatsApp Chat Analyzer</h1>
+    
+            <form class="upload-form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+    
+            
+                <!-- <input type="file" name="file" accept=".txt"> -->
+
+                <input type="file" name="file" >
+    
+                <input type="submit" value="Upload">
+            </form>
+    
+            <!-- {{graph}} -->
+    
+            
+       
+        
+    
+            
+           
+    
+        </div>
+
+        <!-- {%for j in graph.values%}
+    
+        <div class="k">
+    
+            <!-- {{i}} -->
+            <!-- <img src="data:png;base64,{{j}}" alt="">
+        </div>
+    
+        {%endfor%} --> -->
+
+
+        <!-- <div class="table-container">
+            {{dataframe|safe}}
+            
+        </div> -->
+
+        <div class="table-container">
+            {{dataframe|safe}}
+            
+        </div>
+
+
+   
+
+
+    
+
+    
+    
+</body>
+</html>

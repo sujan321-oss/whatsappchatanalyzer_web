@@ -1,0 +1,304 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+  overflow: hidden;
+}
+
+
+.maindiv
+{
+    display: flex;
+    overflow: hidden;
+}
+
+
+.leftdiv
+{
+    /* border: solid; */
+    height: 100vh;
+    width: 30vh;
+    overflow: hidden;
+    background-color: #dfe6e4;
+   
+
+
+
+}
+
+.heading
+{
+    /* border: solid; */
+    margin-top: 11px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+
+
+}
+
+.user
+{
+    /* border: solid; */
+    /* background-color: rgb(162, 162, 166); */
+    /* height: 20px; */
+    /* margin-top: 20px; */
+    margin-top:    50px;
+    /* padding: 10px; */
+    /* border-radius: 10px; */
+    overflow: hidden;
+
+    
+
+}
+
+.selection
+{
+
+    
+    /* height: 20px; */
+    padding: 20px;
+
+    width: 30vh;
+    border-radius: 8px;
+    /* border: none; */
+    /* outline: solid blue 2px; */
+    border-width: 2px ;
+    background-color: #999 ;
+
+
+    
+
+
+    
+}
+
+.time
+{
+    /* border: solid; */
+    /* background-color: rgb(225, 220, 220); */
+    height: 20px;
+    margin-top: 50px;
+    /* border-radius: 10px; */
+    /* padding: 10px; */
+    
+
+}
+
+
+.day
+{
+    /* border: solid; */
+    /* border-radius: 10px; */
+    /* background-color: red; */
+    /* height: 20px; */
+    margin-top: 100px;
+    /* padding: 10px; */
+
+}
+
+.date
+{
+    /* border: solid; */
+    /* background-color: red; */
+    /* height: 20px; */
+    margin-top: 50px;
+    /* border-radius: 10px; */
+    /* padding: 10px; */
+}
+
+#showLeftDivButton
+{
+    /* margin-top: 20px; */
+    display: none;
+ 
+
+}
+
+
+.showgraph
+{
+    /* position: relative; */
+    /* border: solid; */
+    width: 80vw;
+    height: 100vh;
+    margin-left: 40px;
+    overflow: scroll;
+    /* margin-left: 20px; */
+
+
+}
+
+
+
+.headinggraph
+{
+    width: 80vw;
+    position: fixed;
+    /* border: solid; */
+    display: flex;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.graph
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
+/* from the html file started from 159 line */
+
+.table-container {
+    width: 1000px; /* Set the fixed width of the div */
+    height: 500px; /* Set the fixed height of the div */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    background-color: white;
+    margin-top: 50px;
+}
+
+table {
+    width: 100vw;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.showthedata
+{
+    margin-top: 20px;
+    border-radius: 10px;
+
+    width: 16vw;
+    margin-left: 2px;
+    padding: 10px;
+    background-color: #bebadb;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .leftdiv {
+        height: 100vh;
+        width: 30vh;
+        background-color: #dfe6e4;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        position: absolute;
+      
+    }
+    
+    .leftdiv.hidden {
+        transform: translateX(1%);
+    }
+
+#showLeftDivButton
+{
+   display:block;
+   margin-top: 0;
+   position:relative;
+   
+   overflow: hidden;
+   background-color: white;
+   border: hidden;
+   /* border: solid; */
+   padding: 5px;
+
+
+
+}
+
+.slideicon
+{
+  height: 20px;
+   width: 30px;
+   background-color: white;
+
+}
+
+#secondicon
+{
+   display: none;
+   
+    
+}
+
+
+.headinggraph
+{
+   display: none;
+  
+  
+    
+}
+
+.showgraph
+{
+    margin-left: 0px;
+    height: 100vh;
+    width: 100vw;
+    
+
+}
+
+.table-container {
+    width: 73vw;
+    height: 500px;
+     /* Increase top margin for better spacing */
+}
+.showthedata {
+    width: auto; /* Allow content to expand to full width */
+}
+
+
+.showgraph
+{
+    width: 100%;
+    height: 100vh;
+    margin-left: 40px;
+    overflow: scroll;
+    
+}
+
+.graphimages
+{
+    width: 100vw;
+}
+
+.showgraph
+{
+    margin-left: -35px;
+}
+
+
+
+    
+}
+
+
+

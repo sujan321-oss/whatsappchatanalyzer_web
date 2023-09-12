@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+       
+
+
+
+
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/optionpage.css">
+    <script src="/static/js/optionpage.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <div class="maindiv">
+
+
+
+        <form action="" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+        <div class="leftdiv">
+
+            <div class="heading">
+                <h4>WhatsApp Chat Analysis</h4>
+            </div>
+
+    
+            <!-- show the user option -->
+                <div class="user">
+    
+                    <select name="user" id="userselection" class="selection">
+                        <option value="" disabled selected>Select a name</option>
+
+                        {% for i in user%}
+
+                        <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                        
+                    </select>
+    
+    
+                </div>
+    
+                <!-- show the time  -->
+                <div class="time">
+
+    
+                    <select name="time" id="time selection" class="selection" >
+                        <option value="" disabled selected>Choose a time</option>
+
+                        {% for i in time%}
+
+                        <option value="{{i}}">{{i}}</option>
+
+                        {% endfor %}
+                      
+    
+                    </select>
+                    
+                </div>
+    
+    
+                <!-- show the day -->
+                <div class="day">
+    
+                    <select name="day" id="dayselection" class="selection">
+                        <option value="" disabled selected>Choose a day</option>
+
+                        {% for i in day%}
+
+                        <option value="{{i}}">{{i}}</option>
+
+                        {% endfor %}
+                       
+                    </select>
+                    
+                </div>
+    
+    
+                <!-- show the date  -->
+                    <div class="date">
+    
+                        <select name="date" id="dateselection" class="selection">
+                            <option value="" disabled selected>Choose a date</option>
+                            {% for i in date%}
+
+                            <option value="{{i}}">{{i}}</option>
+    
+                            {% endfor %}
+        
+                        </select>
+                        
+                    </div>
+
+
+                    <button type="submit" class="showthedata">show data</button>
+    
+        
+                
+        </div>
+
+    </form>
+
+
+    
+
+
+    
+        <div>
+            <button id="showLeftDivButton" >
+                <img src="/static/images/menu_2976215.png" alt="" id="firsticon" class="slideicon">
+                <img src="/static/images/images.png" alt="" id="secondicon" class="slideicon" >
+      
+            </button>
+    
+           
+    
+    
+    
+    
+    
+        </div>
+    
+    
+
+        
+    
+    
+        <!-- to show the graph -->
+    
+        <div class="showgraph">
+
+            <div class="headinggraph">
+                <h1> WhatsApp Chat Analyzer  {{data}} </h1>
+
+            </div>
+
+
+
+
+            <!-- uploadung the image -->
+
+            
+
+            <!-- starting of the table container  -->
+
+             <div class="table-container">
+            {{dataframe|safe}}
+            
+        </div>
+
+        <!-- ending of the table container -->
+
+
+
+        <!-- staring of the graph div -->
+        {%for j in graph.values%}
+        <div class="graph">
+
+            
+            <img src="data:png;base64,{{j}}" alt="" class="graphimages">
+          
+                
+    
+           
+
+        </div>
+        {%endfor%}
+        <!-- ending of the graph div  -->
+
+            
+
+
+             
+         
+       
+    
+        </div>
+
+    </div>
+
+
+
+   
+
+
+
+
+
+   
+
+
+
+    
+</body>
+</html>
